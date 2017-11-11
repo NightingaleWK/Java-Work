@@ -1,0 +1,24 @@
+//bubble sort code
+public class MyText3{
+    public static void main (String args[]){
+        int[] arr = {6,3,8,2,9,1};
+        System.out.println("befro arr:");
+        for(int mun:arr){
+            System.out.print(mun + "");
+        }
+        for(int i=0;i<arr.length-1;i++){    //outside loop
+            for(int j=0;j<arr.length-1-i;j++){  //inside loop
+                if(arr[j]>arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1]=temp;
+                }
+            }
+        }
+        System.out.println();
+        System.out.println("after arr:");
+        for(int num:arr){
+            System.out.print(num+"");
+        }
+    }
+}
