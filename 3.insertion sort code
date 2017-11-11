@@ -1,0 +1,55 @@
+//insertion sort code
+
+/*This code(error)
+public class MyText4{
+    public static void inserSort(int[] arr){
+        int i,j;
+        int n= arr.length;
+        int target;
+        for (i=1 ;i<n;i++){
+            j=i;
+            target = arr[i];
+            while(j>0&&target<arr[j-1]){
+                arr[j] = arr[j-1];
+                j--;
+            }
+            arr[j]=target;
+        }
+    }
+}
+**/
+
+public class MyText4{
+    public static void InsertSort(int[] source){
+        int i,j;
+        int inserNode;
+        for(i=1;i<source.length;i++){
+            inserNode = source[i];
+            j=i-1;
+            while((j>=0)&&inserNode < source[j]){
+                source[j+1] = source[j];
+                j--;
+            }
+            source[j+1] = inserNode;
+            System.out.print("----sort number is " + i + "----  ");
+            printArray(source);
+        }
+    }
+    private static void printArray(int[] source){
+        for(int i = 0;i<source.length;i++){
+            System.out.print("\t" + source[i]);
+        }
+        System.out.println();
+    }
+    public static void main(String args[]){
+        int source[] = new int[]{53,27,36,15,69,42};
+        System.out.print("---- initial   keys ----");
+        printArray(source);
+        System.out.println("");
+        InsertSort(source);
+        System.out.println("");
+        System.out.print("----the finall sorting result ----");
+        System.out.println("\n");s
+        printArray(source);
+    }
+}
