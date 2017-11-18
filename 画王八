@@ -1,0 +1,27 @@
+import java.awt.*;
+
+public class MyText{
+    public static void main (String args[]){
+        Frame w = new Frame();
+        w.setSize(300, 400);
+
+        MyPanel mp = new MyPanel();
+        w.add(mp);
+
+        w.show();
+    }
+}
+
+class MyPanel extends Panel{
+    public void paint (Graphics g){
+        g.setColor(Color.RED);
+        //g.drawLine(30, 30, 100, 100);
+        g.fillOval(120, 30, 30, 70);//head
+        g.fillOval(85, 70, 100, 100);//body
+        g.fillOval(130, 120, 10, 70);//end
+        g.fillOval(60, 90, 70, 30);//left up
+        g.fillOval(65, 125, 70, 30);//left down
+        g.fillOval(140, 90, 70, 30);//left up
+        g.fillOval(135, 125, 70, 30);//left down
+    }
+}
